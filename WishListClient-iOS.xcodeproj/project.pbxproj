@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E16FD7A18F9E96200EE2701 /* WLPMembershipLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16FD7918F9E96200EE2701 /* WLPMembershipLevel.m */; };
+		7E16FD8018F9EB0C00EE2701 /* WLPMembershipLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16FD7F18F9EB0C00EE2701 /* WLPMembershipLevelsViewController.m */; };
+		7E16FD8318F9ECD000EE2701 /* WLPMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16FD8218F9ECD000EE2701 /* WLPMappingProvider.m */; };
+		7E16FD8518F9F2A800EE2701 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E16FD8418F9F2A800EE2701 /* Storyboard.storyboard */; };
 		7E507F2518F93F9F00C296BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F2418F93F9F00C296BC /* Foundation.framework */; };
 		7E507F2718F93F9F00C296BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F2618F93F9F00C296BC /* CoreGraphics.framework */; };
 		7E507F2918F93F9F00C296BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F2818F93F9F00C296BC /* UIKit.framework */; };
@@ -35,6 +39,13 @@
 /* Begin PBXFileReference section */
 		0A97C924B90A455BB3C6E4C9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC166ACFB6F47FDBD3F9A9A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7E16FD7818F9E96200EE2701 /* WLPMembershipLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPMembershipLevel.h; sourceTree = "<group>"; };
+		7E16FD7918F9E96200EE2701 /* WLPMembershipLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLPMembershipLevel.m; sourceTree = "<group>"; };
+		7E16FD7E18F9EB0C00EE2701 /* WLPMembershipLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPMembershipLevelsViewController.h; sourceTree = "<group>"; };
+		7E16FD7F18F9EB0C00EE2701 /* WLPMembershipLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLPMembershipLevelsViewController.m; sourceTree = "<group>"; };
+		7E16FD8118F9ECD000EE2701 /* WLPMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPMappingProvider.h; sourceTree = "<group>"; };
+		7E16FD8218F9ECD000EE2701 /* WLPMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLPMappingProvider.m; sourceTree = "<group>"; };
+		7E16FD8418F9F2A800EE2701 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		7E507F2118F93F9F00C296BC /* WishListClient-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WishListClient-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E507F2418F93F9F00C296BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7E507F2618F93F9F00C296BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,6 +92,8 @@
 		7E16FD7418F944BF00EE2701 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7E16FD7818F9E96200EE2701 /* WLPMembershipLevel.h */,
+				7E16FD7918F9E96200EE2701 /* WLPMembershipLevel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +108,8 @@
 		7E16FD7618F9450700EE2701 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7E16FD7E18F9EB0C00EE2701 /* WLPMembershipLevelsViewController.h */,
+				7E16FD7F18F9EB0C00EE2701 /* WLPMembershipLevelsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -141,6 +156,9 @@
 				7E507F3418F93F9F00C296BC /* WLPAppDelegate.m */,
 				7E507F3618F93F9F00C296BC /* Images.xcassets */,
 				7E507F2B18F93F9F00C296BC /* Supporting Files */,
+				7E16FD8118F9ECD000EE2701 /* WLPMappingProvider.h */,
+				7E16FD8218F9ECD000EE2701 /* WLPMappingProvider.m */,
+				7E16FD8418F9F2A800EE2701 /* Storyboard.storyboard */,
 			);
 			path = "WishListClient-iOS";
 			sourceTree = "<group>";
@@ -254,6 +272,7 @@
 			files = (
 				7E507F2F18F93F9F00C296BC /* InfoPlist.strings in Resources */,
 				7E507F3718F93F9F00C296BC /* Images.xcassets in Resources */,
+				7E16FD8518F9F2A800EE2701 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +325,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E507F3518F93F9F00C296BC /* WLPAppDelegate.m in Sources */,
+				7E16FD7A18F9E96200EE2701 /* WLPMembershipLevel.m in Sources */,
 				7E507F3118F93F9F00C296BC /* main.m in Sources */,
+				7E16FD8018F9EB0C00EE2701 /* WLPMembershipLevelsViewController.m in Sources */,
+				7E16FD8318F9ECD000EE2701 /* WLPMappingProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
