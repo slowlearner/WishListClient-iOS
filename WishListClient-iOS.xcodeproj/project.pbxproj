@@ -19,6 +19,7 @@
 		7E507F4018F93F9F00C296BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F2818F93F9F00C296BC /* UIKit.framework */; };
 		7E507F4818F93F9F00C296BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E507F4618F93F9F00C296BC /* InfoPlist.strings */; };
 		7E507F4A18F93F9F00C296BC /* WishListClient_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E507F4918F93F9F00C296BC /* WishListClient_iOSTests.m */; };
+		FFDDF66D7D5B4F71B3008519 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A97C924B90A455BB3C6E4C9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A97C924B90A455BB3C6E4C9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EC166ACFB6F47FDBD3F9A9A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		7E507F2118F93F9F00C296BC /* WishListClient-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WishListClient-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E507F2418F93F9F00C296BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7E507F2618F93F9F00C296BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,6 +61,7 @@
 				7E507F2718F93F9F00C296BC /* CoreGraphics.framework in Frameworks */,
 				7E507F2918F93F9F00C296BC /* UIKit.framework in Frameworks */,
 				7E507F2518F93F9F00C296BC /* Foundation.framework in Frameworks */,
+				FFDDF66D7D5B4F71B3008519 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E16FD7418F944BF00EE2701 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7E16FD7518F944F800EE2701 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E16FD7618F9450700EE2701 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		7E507F1818F93F9F00C296BC = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,7 @@
 				7E507F4318F93F9F00C296BC /* WishListClient-iOSTests */,
 				7E507F2318F93F9F00C296BC /* Frameworks */,
 				7E507F2218F93F9F00C296BC /* Products */,
+				1EC166ACFB6F47FDBD3F9A9A /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +126,7 @@
 				7E507F2618F93F9F00C296BC /* CoreGraphics.framework */,
 				7E507F2818F93F9F00C296BC /* UIKit.framework */,
 				7E507F3D18F93F9F00C296BC /* XCTest.framework */,
+				0A97C924B90A455BB3C6E4C9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +134,9 @@
 		7E507F2A18F93F9F00C296BC /* WishListClient-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				7E16FD7418F944BF00EE2701 /* Models */,
+				7E16FD7618F9450700EE2701 /* Controllers */,
+				7E16FD7518F944F800EE2701 /* Views */,
 				7E507F3318F93F9F00C296BC /* WLPAppDelegate.h */,
 				7E507F3418F93F9F00C296BC /* WLPAppDelegate.m */,
 				7E507F3618F93F9F00C296BC /* Images.xcassets */,
@@ -151,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E507F4D18F93F9F00C296BC /* Build configuration list for PBXNativeTarget "WishListClient-iOS" */;
 			buildPhases = (
+				FBE6E203466E4CE491CCDFA9 /* Check Pods Manifest.lock */,
 				7E507F1D18F93F9F00C296BC /* Sources */,
 				7E507F1E18F93F9F00C296BC /* Frameworks */,
 				7E507F1F18F93F9F00C296BC /* Resources */,
+				8E0D002257E4455DBFF9DA6D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +266,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E0D002257E4455DBFF9DA6D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBE6E203466E4CE491CCDFA9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E507F1D18F93F9F00C296BC /* Sources */ = {
@@ -355,6 +420,7 @@
 		};
 		7E507F4E18F93F9F00C296BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EC166ACFB6F47FDBD3F9A9A /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -368,6 +434,7 @@
 		};
 		7E507F4F18F93F9F00C296BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EC166ACFB6F47FDBD3F9A9A /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -438,6 +505,7 @@
 				7E507F4F18F93F9F00C296BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E507F5018F93F9F00C296BC /* Build configuration list for PBXNativeTarget "WishListClient-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +514,7 @@
 				7E507F5218F93F9F00C296BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
