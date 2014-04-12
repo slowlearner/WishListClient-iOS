@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E507F2518F93F9F00C296BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F2418F93F9F00C296BC /* Foundation.framework */; };
+		7E507F2718F93F9F00C296BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F2618F93F9F00C296BC /* CoreGraphics.framework */; };
+		7E507F2918F93F9F00C296BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F2818F93F9F00C296BC /* UIKit.framework */; };
+		7E507F2F18F93F9F00C296BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E507F2D18F93F9F00C296BC /* InfoPlist.strings */; };
+		7E507F3118F93F9F00C296BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E507F3018F93F9F00C296BC /* main.m */; };
+		7E507F3518F93F9F00C296BC /* WLPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E507F3418F93F9F00C296BC /* WLPAppDelegate.m */; };
+		7E507F3718F93F9F00C296BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E507F3618F93F9F00C296BC /* Images.xcassets */; };
+		7E507F3E18F93F9F00C296BC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F3D18F93F9F00C296BC /* XCTest.framework */; };
+		7E507F3F18F93F9F00C296BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F2418F93F9F00C296BC /* Foundation.framework */; };
+		7E507F4018F93F9F00C296BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E507F2818F93F9F00C296BC /* UIKit.framework */; };
+		7E507F4818F93F9F00C296BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E507F4618F93F9F00C296BC /* InfoPlist.strings */; };
+		7E507F4A18F93F9F00C296BC /* WishListClient_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E507F4918F93F9F00C296BC /* WishListClient_iOSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E507F4118F93F9F00C296BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E507F1918F93F9F00C296BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E507F2018F93F9F00C296BC;
+			remoteInfo = "WishListClient-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7E507F2118F93F9F00C296BC /* WishListClient-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WishListClient-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E507F2418F93F9F00C296BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7E507F2618F93F9F00C296BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7E507F2818F93F9F00C296BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7E507F2C18F93F9F00C296BC /* WishListClient-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WishListClient-iOS-Info.plist"; sourceTree = "<group>"; };
+		7E507F2E18F93F9F00C296BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7E507F3018F93F9F00C296BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7E507F3218F93F9F00C296BC /* WishListClient-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WishListClient-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		7E507F3318F93F9F00C296BC /* WLPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLPAppDelegate.h; sourceTree = "<group>"; };
+		7E507F3418F93F9F00C296BC /* WLPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLPAppDelegate.m; sourceTree = "<group>"; };
+		7E507F3618F93F9F00C296BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7E507F3C18F93F9F00C296BC /* WishListClient-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WishListClient-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E507F3D18F93F9F00C296BC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7E507F4518F93F9F00C296BC /* WishListClient-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WishListClient-iOSTests-Info.plist"; sourceTree = "<group>"; };
+		7E507F4718F93F9F00C296BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7E507F4918F93F9F00C296BC /* WishListClient_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WishListClient_iOSTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E507F1E18F93F9F00C296BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E507F2718F93F9F00C296BC /* CoreGraphics.framework in Frameworks */,
+				7E507F2918F93F9F00C296BC /* UIKit.framework in Frameworks */,
+				7E507F2518F93F9F00C296BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E507F3918F93F9F00C296BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E507F3E18F93F9F00C296BC /* XCTest.framework in Frameworks */,
+				7E507F4018F93F9F00C296BC /* UIKit.framework in Frameworks */,
+				7E507F3F18F93F9F00C296BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E507F1818F93F9F00C296BC = {
+			isa = PBXGroup;
+			children = (
+				7E507F2A18F93F9F00C296BC /* WishListClient-iOS */,
+				7E507F4318F93F9F00C296BC /* WishListClient-iOSTests */,
+				7E507F2318F93F9F00C296BC /* Frameworks */,
+				7E507F2218F93F9F00C296BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7E507F2218F93F9F00C296BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E507F2118F93F9F00C296BC /* WishListClient-iOS.app */,
+				7E507F3C18F93F9F00C296BC /* WishListClient-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E507F2318F93F9F00C296BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E507F2418F93F9F00C296BC /* Foundation.framework */,
+				7E507F2618F93F9F00C296BC /* CoreGraphics.framework */,
+				7E507F2818F93F9F00C296BC /* UIKit.framework */,
+				7E507F3D18F93F9F00C296BC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E507F2A18F93F9F00C296BC /* WishListClient-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7E507F3318F93F9F00C296BC /* WLPAppDelegate.h */,
+				7E507F3418F93F9F00C296BC /* WLPAppDelegate.m */,
+				7E507F3618F93F9F00C296BC /* Images.xcassets */,
+				7E507F2B18F93F9F00C296BC /* Supporting Files */,
+			);
+			path = "WishListClient-iOS";
+			sourceTree = "<group>";
+		};
+		7E507F2B18F93F9F00C296BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E507F2C18F93F9F00C296BC /* WishListClient-iOS-Info.plist */,
+				7E507F2D18F93F9F00C296BC /* InfoPlist.strings */,
+				7E507F3018F93F9F00C296BC /* main.m */,
+				7E507F3218F93F9F00C296BC /* WishListClient-iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E507F4318F93F9F00C296BC /* WishListClient-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E507F4918F93F9F00C296BC /* WishListClient_iOSTests.m */,
+				7E507F4418F93F9F00C296BC /* Supporting Files */,
+			);
+			path = "WishListClient-iOSTests";
+			sourceTree = "<group>";
+		};
+		7E507F4418F93F9F00C296BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E507F4518F93F9F00C296BC /* WishListClient-iOSTests-Info.plist */,
+				7E507F4618F93F9F00C296BC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E507F2018F93F9F00C296BC /* WishListClient-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E507F4D18F93F9F00C296BC /* Build configuration list for PBXNativeTarget "WishListClient-iOS" */;
+			buildPhases = (
+				7E507F1D18F93F9F00C296BC /* Sources */,
+				7E507F1E18F93F9F00C296BC /* Frameworks */,
+				7E507F1F18F93F9F00C296BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WishListClient-iOS";
+			productName = "WishListClient-iOS";
+			productReference = 7E507F2118F93F9F00C296BC /* WishListClient-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E507F3B18F93F9F00C296BC /* WishListClient-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E507F5018F93F9F00C296BC /* Build configuration list for PBXNativeTarget "WishListClient-iOSTests" */;
+			buildPhases = (
+				7E507F3818F93F9F00C296BC /* Sources */,
+				7E507F3918F93F9F00C296BC /* Frameworks */,
+				7E507F3A18F93F9F00C296BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E507F4218F93F9F00C296BC /* PBXTargetDependency */,
+			);
+			name = "WishListClient-iOSTests";
+			productName = "WishListClient-iOSTests";
+			productReference = 7E507F3C18F93F9F00C296BC /* WishListClient-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E507F1918F93F9F00C296BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WLP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Peter Indiola";
+				TargetAttributes = {
+					7E507F3B18F93F9F00C296BC = {
+						TestTargetID = 7E507F2018F93F9F00C296BC;
+					};
+				};
+			};
+			buildConfigurationList = 7E507F1C18F93F9F00C296BC /* Build configuration list for PBXProject "WishListClient-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7E507F1818F93F9F00C296BC;
+			productRefGroup = 7E507F2218F93F9F00C296BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E507F2018F93F9F00C296BC /* WishListClient-iOS */,
+				7E507F3B18F93F9F00C296BC /* WishListClient-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E507F1F18F93F9F00C296BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E507F2F18F93F9F00C296BC /* InfoPlist.strings in Resources */,
+				7E507F3718F93F9F00C296BC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E507F3A18F93F9F00C296BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E507F4818F93F9F00C296BC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E507F1D18F93F9F00C296BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E507F3518F93F9F00C296BC /* WLPAppDelegate.m in Sources */,
+				7E507F3118F93F9F00C296BC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E507F3818F93F9F00C296BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E507F4A18F93F9F00C296BC /* WishListClient_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E507F4218F93F9F00C296BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E507F2018F93F9F00C296BC /* WishListClient-iOS */;
+			targetProxy = 7E507F4118F93F9F00C296BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E507F2D18F93F9F00C296BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E507F2E18F93F9F00C296BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7E507F4618F93F9F00C296BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E507F4718F93F9F00C296BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E507F4B18F93F9F00C296BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7E507F4C18F93F9F00C296BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E507F4E18F93F9F00C296BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WishListClient-iOS/WishListClient-iOS-Prefix.pch";
+				INFOPLIST_FILE = "WishListClient-iOS/WishListClient-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7E507F4F18F93F9F00C296BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WishListClient-iOS/WishListClient-iOS-Prefix.pch";
+				INFOPLIST_FILE = "WishListClient-iOS/WishListClient-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7E507F5118F93F9F00C296BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WishListClient-iOS.app/WishListClient-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WishListClient-iOS/WishListClient-iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WishListClient-iOSTests/WishListClient-iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7E507F5218F93F9F00C296BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WishListClient-iOS.app/WishListClient-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WishListClient-iOS/WishListClient-iOS-Prefix.pch";
+				INFOPLIST_FILE = "WishListClient-iOSTests/WishListClient-iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E507F1C18F93F9F00C296BC /* Build configuration list for PBXProject "WishListClient-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E507F4B18F93F9F00C296BC /* Debug */,
+				7E507F4C18F93F9F00C296BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E507F4D18F93F9F00C296BC /* Build configuration list for PBXNativeTarget "WishListClient-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E507F4E18F93F9F00C296BC /* Debug */,
+				7E507F4F18F93F9F00C296BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7E507F5018F93F9F00C296BC /* Build configuration list for PBXNativeTarget "WishListClient-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E507F5118F93F9F00C296BC /* Debug */,
+				7E507F5218F93F9F00C296BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E507F1918F93F9F00C296BC /* Project object */;
+}

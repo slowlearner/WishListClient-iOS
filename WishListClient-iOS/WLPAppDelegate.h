@@ -1,0 +1,15 @@
+//
+//  WLPAppDelegate.h
+//  WishListClient-iOS
+//
+//  Created by Peter Indiola on 4/12/14.
+//  Copyright (c) 2014 Peter Indiola. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface WLPAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
+@end
