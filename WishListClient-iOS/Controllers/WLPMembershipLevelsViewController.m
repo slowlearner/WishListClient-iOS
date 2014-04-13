@@ -26,15 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if ([self authenticated]) {
-        NSLog(@"Authenticate!");
+    BOOL isAuthenticated = [self authenticated];
+    if (isAuthenticated) {
         [self loadMemberShipLevels];
     }
 }
 
 - (void)setCookie
 {
-    NSURL *apiUrl = [NSURL URLWithString:WISHLIST_API_URL];
+    NSURL *apiUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@?/wlmapi/2.0/json/levels", WISHLIST_API_URL]];
     
     NSHTTPCookieStorage *cookieStore = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     NSArray *cookies = [cookieStore cookiesForURL:apiUrl];
@@ -56,8 +56,7 @@
 - (BOOL) authenticated {
     BOOL authenticated = NO;
     
-    NSString *authURL = [NSString stringWithFormat:@"%@?/wlmapi/2.0/json/auth", WISHLIST_API_URL];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@", authURL]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?/wlmapi/2.0/json/auth", WISHLIST_API_URL]];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url
                                                        cachePolicy:NSURLCacheStorageAllowed
                                                    timeoutInterval:60];
@@ -71,7 +70,7 @@
     NSArray *response = [NSJSONSerialization JSONObjectWithData:data
                                                         options:0
                                                           error:&jsonParsingError];
-    NSString *hash = [NSString stringWithFormat:@"%@%@", [response valueForKey:@"lock"], authURL];
+    NSString *hash = [NSString stringWithFormat:@"%@%@", [response valueForKey:@"lock"], WISHLIST_API_KEY];
     const char *cStr = [hash UTF8String];
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
     
@@ -112,7 +111,7 @@
     RKMapping *mapping = [WLPMappingProvider levelMapping];
     RKResponseDescriptor *descriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping
                                                                                     method:RKRequestMethodGET
-                                                                               pathPattern:@"/levels"
+                                                                               pathPattern:@"/?/wlmapi/2.0/json/levels"
                                                                                    keyPath:@"levels"
                                                                                statusCodes:statusCodeSet];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?/wlmapi/2.0/json/levels", WISHLIST_API_URL]];
@@ -123,8 +122,8 @@
     [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         self.levels = mappingResult.array;
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        NSLog(@"ERROR: %@", error);
-        [SVProgressHUD showErrorWithStatus:@"Request failed"];
+        //NSLog(@"ERROR: %@", error);
+        //[SVProgressHUD showErrorWithStatus:@"Request failed"];
     }];
     
     [operation start];
