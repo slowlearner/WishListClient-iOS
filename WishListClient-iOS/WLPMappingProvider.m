@@ -14,11 +14,7 @@
 {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[WLPMembershipLevel class]];
     
-//    [mapping addAttributeMappingsFromArray:@[@"name"]];
-    [mapping addAttributeMappingsFromDictionary:@{
-        @"level.id":@"levelId",
-        @"level.name":@"name"
-    }];
+    [mapping addAttributeMappingsFromArray:@[@"name"]];
     return mapping;
 }
 @end

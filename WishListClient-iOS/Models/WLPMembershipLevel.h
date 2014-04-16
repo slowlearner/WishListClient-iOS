@@ -10,7 +10,7 @@
 
 @interface WLPMembershipLevel : NSObject
 
-@property (nonatomic, assign) NSInteger levelId;
+//@property (nonatomic, assign) NSInteger levelId;
 @property (nonatomic, copy) NSString *name;
 
 @end

@@ -28,7 +28,12 @@
     [super viewDidLoad];
     BOOL isAuthenticated = [self authenticated];
     if (isAuthenticated) {
-        [self loadMemberShipLevels];
+        [SVProgressHUD show];
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(queue, ^{
+            [self loadMemberShipLevels];
+        });
+        
     }
 }
 
@@ -107,25 +112,26 @@
 
 - (void)loadMemberShipLevels
 {
-    NSIndexSet *statusCodeSet = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
     RKMapping *mapping = [WLPMappingProvider levelMapping];
-    RKResponseDescriptor *descriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping
-                                                                                    method:RKRequestMethodGET
-                                                                               pathPattern:@"/?/wlmapi/2.0/json/levels"
-                                                                                   keyPath:@"levels"
-                                                                               statusCodes:statusCodeSet];
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping
+                                                                                            method:RKRequestMethodGET
+                                                                                       pathPattern:nil
+                                                                                           keyPath:@"levels.level"
+                                                                                       statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?/wlmapi/2.0/json/levels", WISHLIST_API_URL]];
-    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
-                                                                        responseDescriptors:@[descriptor]];
-    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        self.levels = mappingResult.array;
+    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
+    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+        _levels = result.array;
+        [self.tableView reloadData];
+         [SVProgressHUD dismiss];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        //NSLog(@"ERROR: %@", error);
-        //[SVProgressHUD showErrorWithStatus:@"Request failed"];
+        NSLog(@"ERROR: %@", error);
+        NSLog(@"Response: %@", operation.HTTPRequestOperation.responseString);
+        [SVProgressHUD showErrorWithStatus:@"Request failed"];
     }];
-    
     [operation start];
 }
 
@@ -134,72 +140,21 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.levels.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return _levels.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    WLPMembershipLevel *level = _levels[indexPath.row];
+    cell.textLabel.text = level.name;
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
