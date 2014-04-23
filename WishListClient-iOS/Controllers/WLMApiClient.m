@@ -84,14 +84,20 @@
     NSData* requestBody = requestBody = [NSData dataWithBytes:[requestParams UTF8String] length:requestParams.length];
     
     switch (method) {
-            case REQUEST_PUT:
             case REQUEST_POST:
-                NSLog(@"req body %@", requestParams);
                 [request setHTTPMethod:@"POST"];
                 [request setHTTPBody:requestBody];
                 responseBody = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
                 break;
+            case REQUEST_PUT:
+                [request setHTTPMethod:@"PUT"];
+                [request setHTTPBody:requestBody];
+                responseBody = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+                break;
             case REQUEST_DELETE:
+                [request setHTTPMethod:@"DELETE"];
+                responseBody = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+                break;
             case REQUEST_GET:
                 responseBody = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
                 break;
