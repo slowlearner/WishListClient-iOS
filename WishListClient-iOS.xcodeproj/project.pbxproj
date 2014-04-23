@@ -23,6 +23,7 @@
 		7E507F4818F93F9F00C296BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E507F4618F93F9F00C296BC /* InfoPlist.strings */; };
 		7E507F4A18F93F9F00C296BC /* WishListClient_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E507F4918F93F9F00C296BC /* WishListClient_iOSTests.m */; };
 		7E6516CB18FE426A00E7C1A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6516CA18FE426A00E7C1A4 /* Main.storyboard */; };
+		C4061A2A1905F6C4008FCCD0 /* WLMApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061A291905F6C4008FCCD0 /* WLMApiClient.m */; };
 		FFDDF66D7D5B4F71B3008519 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A97C924B90A455BB3C6E4C9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		7E507F4718F93F9F00C296BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7E507F4918F93F9F00C296BC /* WishListClient_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WishListClient_iOSTests.m; sourceTree = "<group>"; };
 		7E6516CA18FE426A00E7C1A4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C4061A281905F6C4008FCCD0 /* WLMApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLMApiClient.h; sourceTree = "<group>"; };
+		C4061A291905F6C4008FCCD0 /* WLMApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLMApiClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 			children = (
 				7E16FD7E18F9EB0C00EE2701 /* WLPMembershipLevelsViewController.h */,
 				7E16FD7F18F9EB0C00EE2701 /* WLPMembershipLevelsViewController.m */,
+				C4061A281905F6C4008FCCD0 /* WLMApiClient.h */,
+				C4061A291905F6C4008FCCD0 /* WLMApiClient.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 		7E507F2A18F93F9F00C296BC /* WishListClient-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C4E7031E19053A9300C49BF9 /* iPad */,
 				7E16FD7418F944BF00EE2701 /* Models */,
 				7E16FD7618F9450700EE2701 /* Controllers */,
 				7E16FD7518F944F800EE2701 /* Views */,
@@ -190,6 +196,13 @@
 				7E507F4618F93F9F00C296BC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4E7031E19053A9300C49BF9 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +339,7 @@
 			files = (
 				7E507F3518F93F9F00C296BC /* WLPAppDelegate.m in Sources */,
 				7E16FD7A18F9E96200EE2701 /* WLPMembershipLevel.m in Sources */,
+				C4061A2A1905F6C4008FCCD0 /* WLMApiClient.m in Sources */,
 				7E507F3118F93F9F00C296BC /* main.m in Sources */,
 				7E16FD8018F9EB0C00EE2701 /* WLPMembershipLevelsViewController.m in Sources */,
 				7E16FD8318F9ECD000EE2701 /* WLPMappingProvider.m in Sources */,
@@ -402,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -434,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -449,7 +463,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WishListClient-iOS/WishListClient-iOS-Prefix.pch";
 				INFOPLIST_FILE = "WishListClient-iOS/WishListClient-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -463,7 +479,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WishListClient-iOS/WishListClient-iOS-Prefix.pch";
 				INFOPLIST_FILE = "WishListClient-iOS/WishListClient-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
